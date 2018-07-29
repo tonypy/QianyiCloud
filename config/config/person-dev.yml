@@ -1,0 +1,36 @@
+#spring:
+  #jpa:
+    #database: HSQL
+spring:
+  datasource:
+    name: test
+    url:  jdbc:mysql://192.168.1.10:3306/ag_admin?useUnicode=true&characterEncoding=UTF8&useSSL=true&devMode=false
+    username: root
+    password: 123456
+    #使用druid 数据源
+    type: com.alibaba.druid.pool.DruidDataSource
+    driver-class-name: com.mysql.jdbc.Driver
+    #配置监控统计拦截的filter,去掉后监控界面sql无法统计,'wall'用于防火墙,防止sql注入
+    filters: stat,wall,Slf4j
+    logSlowSql: true
+    maxActive: 20
+    initialSize: 1
+    maxWait: 60000
+    minIdle: 1
+    timeBetweenEvictionRunsMillis: 60000
+    minEvictableIdleTimeMillis: 300000
+    validationQuery: SELECT 1 FROM DUAL
+    testWhileIdle: true
+    testOnBorrow: false
+    testOnReturn: false
+    poolPreparedStatements: true
+    maxOpenPreparedStatements: 20
+    maxPoolPreparedStatementPerConnectionSize: 20
+    #connectionProperties:
+    #useGlobalDataSourceStat:
+#druid登录账号密码
+druid:
+  loginUserName: root
+  loginPassword: 123456
+
+#http://localhost:8765/druid/sql.html  访问这个页面
