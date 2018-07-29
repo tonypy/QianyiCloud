@@ -1,0 +1,2 @@
+# QianyiCloud
+学习使用springcloud架构，其中包括服务注册模块discovery，全局配置模块config，全局监控模块monitor.中间服务模块some、person，some模块通过使用ribbon方式负载均衡服务，person使用feign接口透明化服务，同时集成hystrix 熔断机制。使用ui项目进行服务测试。同时项目集成了docker-compose打包部署，单个项目使用docker打包
