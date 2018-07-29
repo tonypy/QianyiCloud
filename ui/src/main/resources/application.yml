@@ -1,0 +1,10 @@
+server:
+  port: 1080
+
+feign:
+  httpclient:
+    enabled: true
+  
+
+  
+

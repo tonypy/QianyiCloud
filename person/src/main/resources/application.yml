@@ -1,0 +1,20 @@
+server:
+  port: 8082
+ 
+
+#spring:
+  #jpa:
+    #hibernate:
+      #ddl-auto: update
+mybatis:
+  type-aliases-package: com.qianyi.domain
+  mapper-locations: classpath:mapping/*.xml
+
+#pagehelper分页插件
+pagehelper:
+  helper-dialect: mysql
+  reasonable: true
+  support-methods-arguments: true
+  params: count=countSql
+
+

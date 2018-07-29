@@ -1,0 +1,52 @@
+<div class="row">
+    <div class="col-xs-12">
+        <div class="row">
+            <div class="col-xs-12">
+                <h3>通过Sms Service发送短信</h3>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-12">
+                <div class="row" ng-if="errorMessage != ''">
+                    <div class="col-xs-12">
+                        <p class="bg-danger text-center">
+                            <span ng-bind="errorMessage"></span>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xs-12">
+
+                <form>
+                    <div class="form-group">
+                        <input type="text" class="form-control" id="msg" ng-model="msg" placeholder="短信内容">
+                    </div>
+                    <div>
+                        <label>{{msgstr}}</label>
+                    </div>
+                    <button type="submit" class="btn btn-default" ng-click="sendMessage(msg)">发送短信</button>
+                </form>
+                <form>
+                    <div class="form-group">
+                        <input type="text" class="form-control" id="code" ng-model="code" placeholder="短信状态查询">
+                    </div>
+                    <div>
+                        <label>{{datastr}}</label>
+                    </div>
+                    <button type="submit" class="btn btn-default" ng-click="report(code)">短信状态查询</button>
+                </form>
+                <form>
+                    <div class="form-group">
+                        <input type="text" class="form-control" id="replyinfo" ng-model="replyinfo" placeholder="短信回复内容查询">
+                    </div>
+                    <div>
+                        <label>{{str}}</label>
+                    </div>
+                    <button type="submit" class="btn btn-default" ng-click="reply(replyinfo)">短信回复内容查询</button>
+                </form>
+
+            </div>
+
+        </div>
+    </div>
+</div>
