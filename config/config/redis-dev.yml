@@ -1,8 +1,8 @@
 spring:
   redis:
-    host:
-    port:
-    password:
+    host: 192.168.99.100
+    port: 6379
+    password: 
     timeout:  5000
     database: 0  #连接数据库默认为0
     pool:
