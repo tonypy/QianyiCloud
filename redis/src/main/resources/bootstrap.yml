@@ -1,0 +1,22 @@
+spring:
+  application:
+    name: redis
+  cloud:
+    config:
+      #enabled: true
+      #discovery:
+        #enabled: true
+        #service-id: CONFIG
+      profile: dev
+      uri: http://localhost:8888/
+      label: master
+eureka:
+  instance:
+    non-secure-port: ${server.port:8083}
+  client:
+    service-url:
+      defaultZone: http://${eureka.host:localhost}:${eureka.port:8761}/eureka/
+    register-with-eureka: true
+management:
+  security:
+    enabled: false  #修改 /refresh请求的安全性验证
