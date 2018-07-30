@@ -17,6 +17,7 @@
         <module>person</module>
 		<module>some</module>
         <module>monitor</module>
+        <module>redis</module>
     </modules>
 
 
