@@ -76,6 +76,13 @@
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>
         </dependency>
+      <dependency>
+            <groupId>com.qianyi</groupId>
+            <artifactId>redis</artifactId>
+            <version>1.0.1</version>
+            <scope>system</scope>
+            <systemPath>${project.basedir}/../lib/redis-1.0.1.jar</systemPath>
+        </dependency>
     </dependencies>
     <build>
         <plugins>

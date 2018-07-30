@@ -5,6 +5,7 @@ import com.qianyi.person.domain.User;
 import com.qianyi.person.service.UserService;
 import org.apache.ibatis.annotations.Param;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.cache.annotation.Cacheable;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
@@ -14,7 +15,7 @@ public class UserController {
     @Autowired
     private UserService userService;
 
-
+    @Cacheable(value = "usercache",key = "#id")
     @RequestMapping(value = "/selectByPrimaryKey/{id}",method = RequestMethod.GET)
     public User  selectByPrimaryKey(@PathVariable("id") Integer id){
 
