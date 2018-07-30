@@ -17,7 +17,7 @@ spring:
       config:
         server:
           git:
-            uri: https://gitee.com/tonypy1314/QianyiCloud #通过配置git 仓库地址读取配置文件
+            uri: https://github.com/tonypy/QianyiCloud #通过配置git 仓库地址读取配置文件
             search-paths: config/config
         label: master
 server:
