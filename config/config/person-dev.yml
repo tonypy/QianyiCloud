@@ -4,7 +4,7 @@
 spring:
   datasource:
     name: test
-    url:  jdbc:mysql://192.168.1.10:3306/ag_admin?useUnicode=true&characterEncoding=UTF8&useSSL=true&devMode=false
+    url:  jdbc:mysql://192.168.20.87:3306/ag_admin?useUnicode=true&characterEncoding=UTF8&useSSL=true&devMode=false
     username: root
     password: 123456
     #使用druid 数据源
